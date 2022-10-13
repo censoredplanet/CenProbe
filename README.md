@@ -19,7 +19,8 @@ If you use the `CenFuzz` tool or data, please cite the following publication:
 title = {Network Measurement Methods for Locating and Examining Censorship Devices},<br>
 author = {Sundara Raman, Ram and Wang, Mona and Dalek, Jakub and Mayer, Jonathan and Ensafi, Roya},<br>
 booktitle={In ACM International Conference on emerging Networking EXperiments and Technologies (CoNEXT)},<br>
-year={2
+year={2022}
+```
 
 ## Licensing
 This repository is released under the GNU General Public License (see [`LICENSE`](LICENSE)).
