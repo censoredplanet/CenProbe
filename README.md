@@ -30,7 +30,8 @@ Email addresses: `censoredplanet@umich.edu`, `ramaks@umich.edu`, `monaw@princeto
 
 ## Contributors
 
+[Mona Wang](https://github.com/m0namon)
+
 [Ram Sundara Raman](https://github.com/ramakrishnansr)
 
-[Mona Wang](https://github.com/m0namon)
 
