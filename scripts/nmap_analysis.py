@@ -101,7 +101,7 @@ class CensysData(object):
         return self.raw_data["autonomous_system"]["description"]
 
     def location(self):
-        return self.raw_data["location"]["country"]
+        return self.raw_data["location"]["registered_country"]
 
     def services(self):
         return [s["extended_service_name"] for s in self.raw_data["services"]]
