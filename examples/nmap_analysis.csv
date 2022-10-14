@@ -1,1 +1,4 @@
 IP address,# open ports,Nmap OS guess,AS,AS description,Location,Services open from Censys
+1.1.1.1,"[[53, ""domain""], [80, ""http""], [443, ""https""]]","Aggressive OS guesses: Crestron XPanel control system (89%), OpenWrt 0.9 - 7.09 (Linux 2.4.30 - 2.4.34) (87%), OpenWrt White Russian 0.9 (Linux 2.4.30) (87%), OpenWrt Kamikaze 7.09 (Linux 2.6.22) (87%), HP P2000 G3 NAS device (86%), Linux 2.6.32 - 3.10 (86%), ProVision-ISR security DVR (86%), Linux 3.10 (86%), Linux 3.12 - 4.4 (86%), ASUS RT-N56U WAP (Linux 3.4) (86%)
+",13335,CLOUDFLARENET,Australia,"['DNS', 'HTTP', 'HTTPS', 'UNKNOWN']"
+142.250.190.46,"[[80, ""http""], [443, ""https""]]",No OS guess,15169,GOOGLE,United States,"['HTTP', 'HTTPS']"
