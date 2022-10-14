@@ -24,7 +24,6 @@ python3.9 scripts/fetch_censys_data.py --filename examples/host_list.txt --outfi
 python3.9 scripts/nmap_analysis.py --dir nmap_results --censys examples/censys_results.json --outfile examples/nmap_analysis.csv
 
 # 4. Banner grabs using zgrab
-<<<<<<< HEAD
 python3.9 scripts/prep_zgrab.py --nmap_csv examples/nmap_analysis.csv | zgrab2 multiple -c config/zgrab.ini > examples/zgrab_data.jsonl
 
 5. Generating labels from Zgrab data
