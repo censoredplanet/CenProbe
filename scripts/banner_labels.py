@@ -3,6 +3,7 @@ import json
 import subprocess
 import sys
 import csv
+import logging
 
 import operator
 from functools import reduce
