@@ -4,7 +4,7 @@ This repository contains a set of scripts for actively probing and collecting da
 ## Requirements
  * Install [Python v3.9](https://www.python.org/downloads/release/python-390/) or higher.
  * Install [Jupyter Notebook](https://jupyter.org/install), for instance using `pip install jupyter-notebook`.
- * Install the [`zgrab2`](https://github.com/zmap/zgrab2) command-line tool.
+ * Install the [`zgrab2`](go get github.com/zmap/zgrab2) command-line tool.
  * (Optional) Install and configure the [`censys-python`](https://github.com/censys/censys-python) package.
 
 ## Pipeline overview
@@ -21,13 +21,13 @@ sudo python3.9 scripts/nmap_hosts.py examples/host_list.txt nmap_results
 python3.9 scripts/fetch_censys_data.py --filename examples/host_list.txt --outfile examples/censys_results.json
 
 # 3. Summarize nmap, CenTrace, and Censys data
-python3.9 scripts/nmap_analysis.py --dir nmap_results --censys examples/censys_results.json --probes examples/probe_analyzed_output.csv --outfile examples/nmap_analysis.csv
+python3.9 scripts/nmap_analysis.py --dir nmap_results --censys examples/censys_results.json --outfile examples/nmap_analysis.csv
 
 # 4. Banner grabs using zgrab
-python3.9 scripts/prep_zgrab.py --nmap_csv nmap_analysis.csv | zgrab multiple -c zgrab.ini > zgrab_data.jsonl
+python3.9 scripts/prep_zgrab.py --nmap_csv examples/nmap_analysis.csv | zgrab2 multiple -c config/zgrab.ini > examples/zgrab_data.jsonl
 
 5. Generating labels from Zgrab data
-python3.9 scripts/banner_labels.py --zgrab_data zgrab_data.jsonl --outfile labels.csv
+python3.9 scripts/banner_labels.py --zgrab examples/zgrab_data.jsonl --outfile examples/labels.csv
 ```
 
 
