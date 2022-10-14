@@ -89,5 +89,5 @@ if __name__ == "__main__":
     stdout = sys.stdout
     if args.outfile:
         stdout = open(args.outfile, "w")
-    main(args.zgrab stdout)
+    main(args.zgrab, stdout)
 

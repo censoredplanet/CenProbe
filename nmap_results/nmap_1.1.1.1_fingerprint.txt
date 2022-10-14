@@ -1,0 +1,83 @@
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2022-10-13 19:56 EDT
+PORTS: Using top 1000 ports found open (TCP:1000, UDP:0, SCTP:0)
+--------------- Timing report ---------------
+  hostgroups: min 1, max 100000
+  rtt-timeouts: init 1000, min 100, max 10000
+  max-scan-delay: TCP 1000, UDP 1000, SCTP 1000
+  parallelism: min 0, max 0
+  max-retries: 10, host-timeout: 0
+  min-rate: 0, max-rate: 0
+---------------------------------------------
+Initiating Ping Scan at 19:56
+Scanning 1.1.1.1 [4 ports]
+Packet capture filter (device enp1s0f1): dst host 141.212.123.145 and (icmp or icmp6 or ((tcp or udp or sctp) and (src host 1.1.1.1)))
+We got a ping packet back from 1.1.1.1: id = 17253 seq = 0 checksum = 48282
+Completed Ping Scan at 19:56, 0.23s elapsed (1 total hosts)
+Overall sending rates: 17.60 packets / s, 668.70 bytes / s.
+mass_rdns: Using DNS server 127.0.0.53
+Initiating Parallel DNS resolution of 1 host. at 19:56
+mass_rdns: 0.01s 0/1 [#: 1, OK: 0, NX: 0, DR: 0, SF: 0, TR: 1]
+Completed Parallel DNS resolution of 1 host. at 19:56, 0.01s elapsed
+DNS resolution of 1 IPs took 0.01s. Mode: Async [#: 1, OK: 1, NX: 0, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating SYN Stealth Scan at 19:56
+Scanning one.one.one.one (1.1.1.1) [1000 ports]
+Packet capture filter (device enp1s0f1): dst host 141.212.123.145 and (icmp or icmp6 or ((tcp or udp or sctp) and (src host 1.1.1.1)))
+Discovered open port 53/tcp on 1.1.1.1
+Increased max_successful_tryno for 1.1.1.1 to 1 (packet drop)
+Discovered open port 80/tcp on 1.1.1.1
+Discovered open port 443/tcp on 1.1.1.1
+Increased max_successful_tryno for 1.1.1.1 to 2 (packet drop)
+Increasing send delay for 1.1.1.1 from 0 to 5 due to 11 out of 25 dropped probes since last increase.
+Destroying timed-out global ping from 1.1.1.1.
+Completed SYN Stealth Scan at 19:57, 28.51s elapsed (1000 total ports)
+Overall sending rates: 140.90 packets / s, 6199.49 bytes / s.
+Packet capture filter (device enp1s0f1): dst host 141.212.123.145 and (icmp or (tcp and (src host 1.1.1.1)))
+Initiating OS detection (try #1) against one.one.one.one (1.1.1.1)
+OS detection timingRatio() == (1665705427.728 - 1665705427.227) * 1000 / 500 == 1.002
+Retrying OS detection (try #2) against one.one.one.one (1.1.1.1)
+TCP packet: 1.1.1.1:53 -> 141.212.123.145:48611 (total: 52 bytes)
+Flags: SYN ACK 
+ipid: 0 ttl: 57 Seq: 3964700742	Ack: 2612616262
+TCP packet: 1.1.1.1:53 -> 141.212.123.145:48612 (total: 52 bytes)
+Flags: SYN ACK 
+ipid: 0 ttl: 57 Seq: 2726926254	Ack: 2612616263
+TCP packet: 1.1.1.1:53 -> 141.212.123.145:48613 (total: 48 bytes)
+Flags: SYN ACK 
+ipid: 0 ttl: 57 Seq: 335441455	Ack: 2612616264
+Insufficient responses from 1.1.1.1 for TCP sequencing (3), OS detection may be less accurate
+OS detection timingRatio() == (1665705430.304 - 1665705430.104) * 1000 / 500 == 0.400
+Nmap scan report for one.one.one.one (1.1.1.1)
+Host is up, received echo-reply ttl 57 (0.0020s latency).
+Scanned at 2022-10-13 19:56:38 EDT for 33s
+Not shown: 997 filtered ports
+Reason: 997 no-responses
+PORT    STATE SERVICE REASON
+53/tcp  open  domain  syn-ack ttl 57
+80/tcp  open  http    syn-ack ttl 57
+443/tcp open  https   syn-ack ttl 57
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: Crestron XPanel control system (89%), OpenWrt 0.9 - 7.09 (Linux 2.4.30 - 2.4.34) (87%), OpenWrt White Russian 0.9 (Linux 2.4.30) (87%), OpenWrt Kamikaze 7.09 (Linux 2.6.22) (87%), HP P2000 G3 NAS device (86%), Linux 2.6.32 - 3.10 (86%), ProVision-ISR security DVR (86%), Linux 3.10 (86%), Linux 3.12 - 4.4 (86%), ASUS RT-N56U WAP (Linux 3.4) (86%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.60%E=4%D=10/13%OT=53%CT=%CU=%PV=N%G=N%TM=6348A5D7%P=x86_64-pc-linux-gnu)
+SEQ(SP=105%GCD=1%ISR=10A%TI=Z%TS=U)
+SEQ(TI=Z%TS=U)
+OPS(O1=M5B4NNSNWD%O2=M5B4NNSNWD%O3=M5B4NWD%O4=M5B4NNSNWD%O5=M5B4NNSNWD%O6=M5B4NNS)
+WIN(W1=FAF0%W2=FAF0%W3=FAF0%W4=FAF0%W5=FAF0%W6=FAF0)
+ECN(R=Y%DF=Y%TG=40%W=FAF0%O=M5B4NNSNWD%CC=Y%Q=)
+T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=Y%DF=Y%TG=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)
+U1(R=N)
+IE(R=Y%DFI=N%TG=40%CD=S)
+
+IP ID Sequence Generation: All zeros
+Final times for host: srtt: 2015 rttvar: 60  to: 100000
+
+Read from /usr/bin/../share/nmap: nmap-os-db nmap-payloads nmap-services.
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 33.25 seconds
+           Raw packets sent: 4103 (185.564KB) | Rcvd: 111 (7.520KB)

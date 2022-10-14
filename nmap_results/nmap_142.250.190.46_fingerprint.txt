@@ -1,0 +1,85 @@
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2022-10-13 19:56 EDT
+PORTS: Using top 1000 ports found open (TCP:1000, UDP:0, SCTP:0)
+--------------- Timing report ---------------
+  hostgroups: min 1, max 100000
+  rtt-timeouts: init 1000, min 100, max 10000
+  max-scan-delay: TCP 1000, UDP 1000, SCTP 1000
+  parallelism: min 0, max 0
+  max-retries: 10, host-timeout: 0
+  min-rate: 0, max-rate: 0
+---------------------------------------------
+Initiating Ping Scan at 19:56
+Scanning 142.250.190.46 [4 ports]
+Packet capture filter (device enp1s0f1): dst host 141.212.123.145 and (icmp or icmp6 or ((tcp or udp or sctp) and (src host 142.250.190.46)))
+We got a TCP ping packet back from 142.250.190.46 port 443 (trynum = 0)
+Completed Ping Scan at 19:56, 0.22s elapsed (1 total hosts)
+Overall sending rates: 18.35 packets / s, 697.41 bytes / s.
+mass_rdns: Using DNS server 127.0.0.53
+Initiating Parallel DNS resolution of 1 host. at 19:56
+mass_rdns: 0.01s 0/1 [#: 1, OK: 0, NX: 0, DR: 0, SF: 0, TR: 1]
+Completed Parallel DNS resolution of 1 host. at 19:56, 0.01s elapsed
+DNS resolution of 1 IPs took 0.01s. Mode: Async [#: 1, OK: 1, NX: 0, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating SYN Stealth Scan at 19:56
+Scanning ord37s33-in-f14.1e100.net (142.250.190.46) [1000 ports]
+Packet capture filter (device enp1s0f1): dst host 141.212.123.145 and (icmp or icmp6 or ((tcp or udp or sctp) and (src host 142.250.190.46)))
+Discovered open port 443/tcp on 142.250.190.46
+Discovered open port 80/tcp on 142.250.190.46
+Completed SYN Stealth Scan at 19:56, 12.28s elapsed (1000 total ports)
+Overall sending rates: 163.42 packets / s, 7190.39 bytes / s.
+Packet capture filter (device enp1s0f1): dst host 141.212.123.145 and (icmp or (tcp and (src host 142.250.190.46)))
+Initiating OS detection (try #1) against ord37s33-in-f14.1e100.net (142.250.190.46)
+OS detection timingRatio() == (1665705411.484 - 1665705410.982) * 1000 / 500 == 1.004
+Retrying OS detection (try #2) against ord37s33-in-f14.1e100.net (142.250.190.46)
+TCP packet: 142.250.190.46:80 -> 141.212.123.145:45563 (total: 60 bytes)
+Flags: SYN ACK 
+ipid: 0 ttl: 56 Seq: 3555349237	Ack: 2449565908
+TCP packet: 142.250.190.46:80 -> 141.212.123.145:45564 (total: 60 bytes)
+Flags: SYN ACK 
+ipid: 0 ttl: 56 Seq: 2351931284	Ack: 2449565909
+TCP packet: 142.250.190.46:80 -> 141.212.123.145:45565 (total: 60 bytes)
+Flags: SYN ACK 
+ipid: 0 ttl: 122 Seq: 3806794499	Ack: 2449565910
+TCP packet: 142.250.190.46:80 -> 141.212.123.145:45566 (total: 60 bytes)
+Flags: SYN ACK 
+ipid: 0 ttl: 122 Seq: 3273106859	Ack: 2449565911
+TCP packet: 142.250.190.46:80 -> 141.212.123.145:45567 (total: 60 bytes)
+Flags: SYN ACK 
+ipid: 0 ttl: 121 Seq: 1422856834	Ack: 2449565912
+TCP packet: 142.250.190.46:80 -> 141.212.123.145:45568 (total: 56 bytes)
+Flags: SYN ACK 
+ipid: 0 ttl: 121 Seq: 3033535564	Ack: 2449565913
+OS detection timingRatio() == (1665705414.231 - 1665705413.730) * 1000 / 500 == 1.004
+Nmap scan report for ord37s33-in-f14.1e100.net (142.250.190.46)
+Host is up, received syn-ack ttl 121 (0.0068s latency).
+Scanned at 2022-10-13 19:56:38 EDT for 17s
+Not shown: 998 filtered ports
+Reason: 998 no-responses
+PORT    STATE SERVICE REASON
+80/tcp  open  http    syn-ack ttl 56
+443/tcp open  https   syn-ack ttl 56
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+No OS matches for host
+TCP/IP fingerprint:
+SCAN(V=7.60%E=4%D=10/13%OT=80%CT=%CU=%PV=N%G=N%TM=6348A5C7%P=x86_64-pc-linux-gnu)
+SEQ(SP=102%GCD=1%ISR=10D%TI=Z%TS=20)
+OPS(O1=M584ST11NW8%O2=M584ST11NW8%O3=M584NNT11NW8%O4=M584ST11NW8%O5=M584ST11NW8%O6=M584ST11)
+WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FFFF)
+ECN(R=Y%DF=Y%TG=40%W=FFFF%O=M584NNSNW8%CC=N%Q=)
+T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=Y%DF=Y%TG=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)
+U1(R=N)
+IE(R=Y%DFI=N%TG=40%CD=Z)
+
+Uptime guess: 0.000 days (since Thu Oct 13 19:56:52 2022)
+TCP Sequence Prediction: Difficulty=258 (Good luck!)
+IP ID Sequence Generation: All zeros
+Final times for host: srtt: 6790 rttvar: 550  to: 100000
+
+Read from /usr/bin/../share/nmap: nmap-os-db nmap-payloads nmap-services.
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 17.21 seconds
+           Raw packets sent: 2101 (97.226KB) | Rcvd: 106 (5.692KB)
