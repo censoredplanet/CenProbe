@@ -1,4 +1,6 @@
 # CenProbe
+[![DOI](https://zenodo.org/badge/550554376.svg)](https://zenodo.org/badge/latestdoi/550554376)
+
 This repository contains a set of scripts for actively probing and collecting data about particular network devices, including those that perform censorship. In here, we include a variety of scripts for collecting network features and banners from `nmap`, `zgrab2`, and performing light clustering and classification against the resulting data.
 
 ## Requirements
